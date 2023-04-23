@@ -1,3 +1,5 @@
+document.getElementById('tiresult').hidden = true;
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
@@ -15,3 +17,14 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+var keySequence = "";
+
+document.onkeydown = function(event) {
+  keySequence += event.key;
+  if (keySequence != "h" && keySequence != "he" && keySequence != "hel" && keySequence != "help") {
+    keySequence = "";
+  } else if (keySequence == "help") {
+    document.getElementById('tiresult').hidden = false;
+  }
+}

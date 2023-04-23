@@ -1,4 +1,0 @@
-- main splash
-- projects
-- about
-- socials
